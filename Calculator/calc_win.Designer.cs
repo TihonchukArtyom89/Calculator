@@ -51,15 +51,17 @@ namespace Calculator
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.division_btn = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.result_btn = new System.Windows.Forms.Button();
+            this.change_signe_btn = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.Monitor_txtbx = new System.Windows.Forms.TextBox();
             this.digits_grp.SuspendLayout();
             this.operators_grp.SuspendLayout();
             this.button_grp.SuspendLayout();
+            this.monitor_grp.SuspendLayout();
             this.SuspendLayout();
             // 
             // dev_note
@@ -112,8 +114,8 @@ namespace Calculator
             this.operators_grp.Controls.Add(this.button10);
             this.operators_grp.Controls.Add(this.button11);
             this.operators_grp.Controls.Add(this.button12);
-            this.operators_grp.Controls.Add(this.button7);
-            this.operators_grp.Controls.Add(this.button8);
+            this.operators_grp.Controls.Add(this.result_btn);
+            this.operators_grp.Controls.Add(this.change_signe_btn);
             this.operators_grp.Controls.Add(this.button9);
             this.operators_grp.Controls.Add(this.button4);
             this.operators_grp.Controls.Add(this.button5);
@@ -266,6 +268,7 @@ namespace Calculator
             // 
             this.monitor_grp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.monitor_grp.Controls.Add(this.Monitor_txtbx);
             this.monitor_grp.Location = new System.Drawing.Point(15, 35);
             this.monitor_grp.Name = "monitor_grp";
             this.monitor_grp.Size = new System.Drawing.Size(376, 72);
@@ -339,27 +342,27 @@ namespace Calculator
             this.division_btn.Text = "/";
             this.division_btn.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // result_btn
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.result_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button7.Location = new System.Drawing.Point(70, 28);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(43, 55);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "N/A";
-            this.button7.UseVisualStyleBackColor = true;
+            this.result_btn.Location = new System.Drawing.Point(70, 28);
+            this.result_btn.Name = "result_btn";
+            this.result_btn.Size = new System.Drawing.Size(43, 55);
+            this.result_btn.TabIndex = 18;
+            this.result_btn.Text = "=";
+            this.result_btn.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // change_signe_btn
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.change_signe_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button8.Location = new System.Drawing.Point(70, 89);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(43, 55);
-            this.button8.TabIndex = 17;
-            this.button8.Text = "N/A";
-            this.button8.UseVisualStyleBackColor = true;
+            this.change_signe_btn.Location = new System.Drawing.Point(70, 89);
+            this.change_signe_btn.Name = "change_signe_btn";
+            this.change_signe_btn.Size = new System.Drawing.Size(43, 55);
+            this.change_signe_btn.TabIndex = 17;
+            this.change_signe_btn.Text = "+/-";
+            this.change_signe_btn.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
@@ -405,6 +408,14 @@ namespace Calculator
             this.button12.Text = "N/A";
             this.button12.UseVisualStyleBackColor = true;
             // 
+            // Monitor_txtbx
+            // 
+            this.Monitor_txtbx.Location = new System.Drawing.Point(6, 19);
+            this.Monitor_txtbx.Multiline = true;
+            this.Monitor_txtbx.Name = "Monitor_txtbx";
+            this.Monitor_txtbx.Size = new System.Drawing.Size(364, 47);
+            this.Monitor_txtbx.TabIndex = 0;
+            // 
             // calc_win
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,6 +430,8 @@ namespace Calculator
             this.digits_grp.ResumeLayout(false);
             this.operators_grp.ResumeLayout(false);
             this.button_grp.ResumeLayout(false);
+            this.monitor_grp.ResumeLayout(false);
+            this.monitor_grp.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,8 +458,8 @@ namespace Calculator
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button result_btn;
+        private System.Windows.Forms.Button change_signe_btn;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
@@ -454,6 +467,7 @@ namespace Calculator
         private System.Windows.Forms.Button plus_btn;
         private System.Windows.Forms.Button minus_btn;
         private System.Windows.Forms.Button multiplication_btn;
+        private System.Windows.Forms.TextBox Monitor_txtbx;
     }
 }
 
