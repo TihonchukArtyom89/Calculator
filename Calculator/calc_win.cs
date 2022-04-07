@@ -86,5 +86,10 @@ namespace Calculator
         {
 
         }
+
+        private void plus_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
