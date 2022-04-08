@@ -12,7 +12,7 @@ namespace Calculator
 {
     public partial class calc_win : Form
     {
-        float first_operand, second_operand;
+        float first_operand=float.NaN, second_operand= float.NaN;
         int oper;
         bool sign = true;
 
@@ -21,32 +21,30 @@ namespace Calculator
 
             InitializeComponent();
         }
-        //рефакторинг позже: сделать функцию для набора цифр
-        //апгрейд сделать кнопку которая стирает все написанное
         private void btn_5_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 5;
-            }
-            else
-            {
-                Monitor_txtbx.Clear();
-                Monitor_txtbx.Text += 5;
-            }
+            enter_digit(5);
         }
         
         public void enter_digit(int digit)
-        {
-            if (Monitor_txtbx.Text != "0")
+        {//разобраться с операциями и подсчётом результата
+            if (float.IsNaN(second_operand))
             {
-                Monitor_txtbx.Text += digit;
+                if (Monitor_txtbx.Text != "0")
+                {
+                    Monitor_txtbx.Text += digit;
+                }
+                else
+                {
+                    Monitor_txtbx.Clear();
+                    Monitor_txtbx.Text += digit;
+                }
             }
             else
             {
-                Monitor_txtbx.Clear();
-                Monitor_txtbx.Text += digit;
+
             }
+
         }
 
         private void dev_note_Click(object sender, EventArgs e)
@@ -128,16 +126,16 @@ namespace Calculator
             }
         }
 
-        private void plus_btn_Click_1(object sender, EventArgs e)
+        private void clear_entry_btn_Click(object sender, EventArgs e)
         {
-            oper = 1;
-            first_operand = float.Parse(Monitor_txtbx.Text);
-            Monitor_txtbx.Clear();
+            Monitor_txtbx.Text = "0";
         }
 
         private void plus_btn_Click(object sender, EventArgs e)
         {
-
+            oper = 1;
+            first_operand = float.Parse(Monitor_txtbx.Text);
+            Monitor_txtbx.Clear();
         }
     }
 }
