@@ -361,6 +361,7 @@ namespace Calculator
             this.plus_btn.TabIndex = 12;
             this.plus_btn.Text = "+";
             this.plus_btn.UseVisualStyleBackColor = true;
+            this.plus_btn.Click += new System.EventHandler(this.plus_btn_Click_1);
             // 
             // minus_btn
             // 
