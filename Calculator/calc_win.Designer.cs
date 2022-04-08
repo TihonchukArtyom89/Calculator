@@ -32,31 +32,31 @@ namespace Calculator
             this.dev_note = new System.Windows.Forms.Label();
             this.title_app = new System.Windows.Forms.Label();
             this.digits_grp = new System.Windows.Forms.GroupBox();
-            this.operators_grp = new System.Windows.Forms.GroupBox();
-            this.btn_0 = new System.Windows.Forms.Button();
-            this.btn_1 = new System.Windows.Forms.Button();
-            this.btn_3 = new System.Windows.Forms.Button();
-            this.btn_4 = new System.Windows.Forms.Button();
-            this.btn_5 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn_2 = new System.Windows.Forms.Button();
             this.btn_9 = new System.Windows.Forms.Button();
             this.btn_8 = new System.Windows.Forms.Button();
             this.btn_7 = new System.Windows.Forms.Button();
-            this.button_grp = new System.Windows.Forms.GroupBox();
-            this.monitor_grp = new System.Windows.Forms.GroupBox();
-            this.plus_btn = new System.Windows.Forms.Button();
-            this.minus_btn = new System.Windows.Forms.Button();
-            this.multiplication_btn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.division_btn = new System.Windows.Forms.Button();
-            this.result_btn = new System.Windows.Forms.Button();
-            this.change_signe_btn = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btn_2 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn_5 = new System.Windows.Forms.Button();
+            this.btn_4 = new System.Windows.Forms.Button();
+            this.btn_3 = new System.Windows.Forms.Button();
+            this.btn_1 = new System.Windows.Forms.Button();
+            this.btn_0 = new System.Windows.Forms.Button();
+            this.operators_grp = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.result_btn = new System.Windows.Forms.Button();
+            this.change_signe_btn = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.division_btn = new System.Windows.Forms.Button();
+            this.plus_btn = new System.Windows.Forms.Button();
+            this.minus_btn = new System.Windows.Forms.Button();
+            this.multiplication_btn = new System.Windows.Forms.Button();
+            this.button_grp = new System.Windows.Forms.GroupBox();
+            this.monitor_grp = new System.Windows.Forms.GroupBox();
             this.Monitor_txtbx = new System.Windows.Forms.TextBox();
             this.digits_grp.SuspendLayout();
             this.operators_grp.SuspendLayout();
@@ -107,114 +107,6 @@ namespace Calculator
             this.digits_grp.Text = "Цифры";
             this.digits_grp.Enter += new System.EventHandler(this.digits_Enter);
             // 
-            // operators_grp
-            // 
-            this.operators_grp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.operators_grp.Controls.Add(this.button10);
-            this.operators_grp.Controls.Add(this.button11);
-            this.operators_grp.Controls.Add(this.button12);
-            this.operators_grp.Controls.Add(this.result_btn);
-            this.operators_grp.Controls.Add(this.change_signe_btn);
-            this.operators_grp.Controls.Add(this.button9);
-            this.operators_grp.Controls.Add(this.button4);
-            this.operators_grp.Controls.Add(this.button5);
-            this.operators_grp.Controls.Add(this.division_btn);
-            this.operators_grp.Controls.Add(this.plus_btn);
-            this.operators_grp.Controls.Add(this.minus_btn);
-            this.operators_grp.Controls.Add(this.multiplication_btn);
-            this.operators_grp.Location = new System.Drawing.Point(189, 19);
-            this.operators_grp.Name = "operators_grp";
-            this.operators_grp.Size = new System.Drawing.Size(179, 272);
-            this.operators_grp.TabIndex = 3;
-            this.operators_grp.TabStop = false;
-            this.operators_grp.Text = "Операторы";
-            this.operators_grp.Enter += new System.EventHandler(this.operators_Enter);
-            // 
-            // btn_0
-            // 
-            this.btn_0.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_0.Location = new System.Drawing.Point(15, 211);
-            this.btn_0.Name = "btn_0";
-            this.btn_0.Size = new System.Drawing.Size(139, 55);
-            this.btn_0.TabIndex = 0;
-            this.btn_0.Text = "0";
-            this.btn_0.UseVisualStyleBackColor = true;
-            this.btn_0.Click += new System.EventHandler(this.btn_0_Click);
-            // 
-            // btn_1
-            // 
-            this.btn_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_1.Location = new System.Drawing.Point(15, 150);
-            this.btn_1.Name = "btn_1";
-            this.btn_1.Size = new System.Drawing.Size(43, 55);
-            this.btn_1.TabIndex = 1;
-            this.btn_1.Text = "1";
-            this.btn_1.UseVisualStyleBackColor = true;
-            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
-            // 
-            // btn_3
-            // 
-            this.btn_3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_3.Location = new System.Drawing.Point(111, 150);
-            this.btn_3.Name = "btn_3";
-            this.btn_3.Size = new System.Drawing.Size(43, 55);
-            this.btn_3.TabIndex = 2;
-            this.btn_3.Text = "3";
-            this.btn_3.UseVisualStyleBackColor = true;
-            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
-            // 
-            // btn_4
-            // 
-            this.btn_4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_4.Location = new System.Drawing.Point(13, 89);
-            this.btn_4.Name = "btn_4";
-            this.btn_4.Size = new System.Drawing.Size(43, 55);
-            this.btn_4.TabIndex = 3;
-            this.btn_4.Text = "4";
-            this.btn_4.UseVisualStyleBackColor = true;
-            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
-            // 
-            // btn_5
-            // 
-            this.btn_5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_5.Location = new System.Drawing.Point(62, 89);
-            this.btn_5.Name = "btn_5";
-            this.btn_5.Size = new System.Drawing.Size(43, 55);
-            this.btn_5.TabIndex = 4;
-            this.btn_5.Text = "5";
-            this.btn_5.UseVisualStyleBackColor = true;
-            this.btn_5.Click += new System.EventHandler(this.btn_5_Click);
-            // 
-            // btn6
-            // 
-            this.btn6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn6.Location = new System.Drawing.Point(111, 89);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(43, 55);
-            this.btn6.TabIndex = 5;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.btn6_Click);
-            // 
-            // btn_2
-            // 
-            this.btn_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_2.Location = new System.Drawing.Point(62, 150);
-            this.btn_2.Name = "btn_2";
-            this.btn_2.Size = new System.Drawing.Size(43, 55);
-            this.btn_2.TabIndex = 6;
-            this.btn_2.Text = "2";
-            this.btn_2.UseVisualStyleBackColor = true;
-            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
-            // 
             // btn_9
             // 
             this.btn_9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -251,129 +143,113 @@ namespace Calculator
             this.btn_7.UseVisualStyleBackColor = true;
             this.btn_7.Click += new System.EventHandler(this.btn_7_Click);
             // 
-            // button_grp
+            // btn_2
             // 
-            this.button_grp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_grp.Controls.Add(this.digits_grp);
-            this.button_grp.Controls.Add(this.operators_grp);
-            this.button_grp.Location = new System.Drawing.Point(12, 123);
-            this.button_grp.Name = "button_grp";
-            this.button_grp.Size = new System.Drawing.Size(379, 297);
-            this.button_grp.TabIndex = 4;
-            this.button_grp.TabStop = false;
-            this.button_grp.Text = "Кнопки";
+            this.btn_2.Location = new System.Drawing.Point(62, 150);
+            this.btn_2.Name = "btn_2";
+            this.btn_2.Size = new System.Drawing.Size(43, 55);
+            this.btn_2.TabIndex = 6;
+            this.btn_2.Text = "2";
+            this.btn_2.UseVisualStyleBackColor = true;
+            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
             // 
-            // monitor_grp
+            // btn6
             // 
-            this.monitor_grp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btn6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.monitor_grp.Controls.Add(this.Monitor_txtbx);
-            this.monitor_grp.Location = new System.Drawing.Point(15, 35);
-            this.monitor_grp.Name = "monitor_grp";
-            this.monitor_grp.Size = new System.Drawing.Size(376, 72);
-            this.monitor_grp.TabIndex = 5;
-            this.monitor_grp.TabStop = false;
-            this.monitor_grp.Text = "Экран";
+            this.btn6.Location = new System.Drawing.Point(111, 89);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(43, 55);
+            this.btn6.TabIndex = 5;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
             // 
-            // plus_btn
+            // btn_5
             // 
-            this.plus_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btn_5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_5.Location = new System.Drawing.Point(62, 89);
+            this.btn_5.Name = "btn_5";
+            this.btn_5.Size = new System.Drawing.Size(43, 55);
+            this.btn_5.TabIndex = 4;
+            this.btn_5.Text = "5";
+            this.btn_5.UseVisualStyleBackColor = true;
+            this.btn_5.Click += new System.EventHandler(this.btn_5_Click);
+            // 
+            // btn_4
+            // 
+            this.btn_4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_4.Location = new System.Drawing.Point(13, 89);
+            this.btn_4.Name = "btn_4";
+            this.btn_4.Size = new System.Drawing.Size(43, 55);
+            this.btn_4.TabIndex = 3;
+            this.btn_4.Text = "4";
+            this.btn_4.UseVisualStyleBackColor = true;
+            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
+            // 
+            // btn_3
+            // 
+            this.btn_3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_3.Location = new System.Drawing.Point(111, 150);
+            this.btn_3.Name = "btn_3";
+            this.btn_3.Size = new System.Drawing.Size(43, 55);
+            this.btn_3.TabIndex = 2;
+            this.btn_3.Text = "3";
+            this.btn_3.UseVisualStyleBackColor = true;
+            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
+            // 
+            // btn_1
+            // 
+            this.btn_1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_1.Location = new System.Drawing.Point(15, 150);
+            this.btn_1.Name = "btn_1";
+            this.btn_1.Size = new System.Drawing.Size(43, 55);
+            this.btn_1.TabIndex = 1;
+            this.btn_1.Text = "1";
+            this.btn_1.UseVisualStyleBackColor = true;
+            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
+            // 
+            // btn_0
+            // 
+            this.btn_0.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_0.Location = new System.Drawing.Point(15, 211);
+            this.btn_0.Name = "btn_0";
+            this.btn_0.Size = new System.Drawing.Size(139, 55);
+            this.btn_0.TabIndex = 0;
+            this.btn_0.Text = "0";
+            this.btn_0.UseVisualStyleBackColor = true;
+            this.btn_0.Click += new System.EventHandler(this.btn_0_Click);
+            // 
+            // operators_grp
+            // 
+            this.operators_grp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.plus_btn.Location = new System.Drawing.Point(21, 28);
-            this.plus_btn.Name = "plus_btn";
-            this.plus_btn.Size = new System.Drawing.Size(43, 55);
-            this.plus_btn.TabIndex = 12;
-            this.plus_btn.Text = "+";
-            this.plus_btn.UseVisualStyleBackColor = true;
-            // 
-            // minus_btn
-            // 
-            this.minus_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.minus_btn.Location = new System.Drawing.Point(21, 89);
-            this.minus_btn.Name = "minus_btn";
-            this.minus_btn.Size = new System.Drawing.Size(43, 55);
-            this.minus_btn.TabIndex = 11;
-            this.minus_btn.Text = "-";
-            this.minus_btn.UseVisualStyleBackColor = true;
-            // 
-            // multiplication_btn
-            // 
-            this.multiplication_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.multiplication_btn.Location = new System.Drawing.Point(21, 150);
-            this.multiplication_btn.Name = "multiplication_btn";
-            this.multiplication_btn.Size = new System.Drawing.Size(43, 55);
-            this.multiplication_btn.TabIndex = 10;
-            this.multiplication_btn.Text = "*";
-            this.multiplication_btn.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.Location = new System.Drawing.Point(70, 211);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 55);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "N/A";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button5.Location = new System.Drawing.Point(117, 211);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(43, 55);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "N/A";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // division_btn
-            // 
-            this.division_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.division_btn.Location = new System.Drawing.Point(21, 211);
-            this.division_btn.Name = "division_btn";
-            this.division_btn.Size = new System.Drawing.Size(43, 55);
-            this.division_btn.TabIndex = 13;
-            this.division_btn.Text = "/";
-            this.division_btn.UseVisualStyleBackColor = true;
-            // 
-            // result_btn
-            // 
-            this.result_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.result_btn.Location = new System.Drawing.Point(70, 28);
-            this.result_btn.Name = "result_btn";
-            this.result_btn.Size = new System.Drawing.Size(43, 55);
-            this.result_btn.TabIndex = 18;
-            this.result_btn.Text = "=";
-            this.result_btn.UseVisualStyleBackColor = true;
-            // 
-            // change_signe_btn
-            // 
-            this.change_signe_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.change_signe_btn.Location = new System.Drawing.Point(70, 89);
-            this.change_signe_btn.Name = "change_signe_btn";
-            this.change_signe_btn.Size = new System.Drawing.Size(43, 55);
-            this.change_signe_btn.TabIndex = 17;
-            this.change_signe_btn.Text = "+/-";
-            this.change_signe_btn.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button9.Location = new System.Drawing.Point(70, 150);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(43, 55);
-            this.button9.TabIndex = 16;
-            this.button9.Text = "N/A";
-            this.button9.UseVisualStyleBackColor = true;
+            this.operators_grp.Controls.Add(this.button10);
+            this.operators_grp.Controls.Add(this.button11);
+            this.operators_grp.Controls.Add(this.button12);
+            this.operators_grp.Controls.Add(this.result_btn);
+            this.operators_grp.Controls.Add(this.change_signe_btn);
+            this.operators_grp.Controls.Add(this.button9);
+            this.operators_grp.Controls.Add(this.button4);
+            this.operators_grp.Controls.Add(this.button5);
+            this.operators_grp.Controls.Add(this.division_btn);
+            this.operators_grp.Controls.Add(this.plus_btn);
+            this.operators_grp.Controls.Add(this.minus_btn);
+            this.operators_grp.Controls.Add(this.multiplication_btn);
+            this.operators_grp.Location = new System.Drawing.Point(189, 19);
+            this.operators_grp.Name = "operators_grp";
+            this.operators_grp.Size = new System.Drawing.Size(179, 272);
+            this.operators_grp.TabIndex = 3;
+            this.operators_grp.TabStop = false;
+            this.operators_grp.Text = "Операторы";
+            this.operators_grp.Enter += new System.EventHandler(this.operators_Enter);
             // 
             // button10
             // 
@@ -408,6 +284,131 @@ namespace Calculator
             this.button12.Text = "N/A";
             this.button12.UseVisualStyleBackColor = true;
             // 
+            // result_btn
+            // 
+            this.result_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.result_btn.Location = new System.Drawing.Point(70, 28);
+            this.result_btn.Name = "result_btn";
+            this.result_btn.Size = new System.Drawing.Size(43, 55);
+            this.result_btn.TabIndex = 18;
+            this.result_btn.Text = "=";
+            this.result_btn.UseVisualStyleBackColor = true;
+            // 
+            // change_signe_btn
+            // 
+            this.change_signe_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.change_signe_btn.Location = new System.Drawing.Point(70, 89);
+            this.change_signe_btn.Name = "change_signe_btn";
+            this.change_signe_btn.Size = new System.Drawing.Size(43, 55);
+            this.change_signe_btn.TabIndex = 17;
+            this.change_signe_btn.Text = "+/-";
+            this.change_signe_btn.UseVisualStyleBackColor = true;
+            this.change_signe_btn.Click += new System.EventHandler(this.change_signe_btn_Click);
+            // 
+            // button9
+            // 
+            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button9.Location = new System.Drawing.Point(70, 150);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(43, 55);
+            this.button9.TabIndex = 16;
+            this.button9.Text = "N/A";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button4.Location = new System.Drawing.Point(70, 211);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(43, 55);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "N/A";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button5.Location = new System.Drawing.Point(117, 211);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(43, 55);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "N/A";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // division_btn
+            // 
+            this.division_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.division_btn.Location = new System.Drawing.Point(21, 211);
+            this.division_btn.Name = "division_btn";
+            this.division_btn.Size = new System.Drawing.Size(43, 55);
+            this.division_btn.TabIndex = 13;
+            this.division_btn.Text = "/";
+            this.division_btn.UseVisualStyleBackColor = true;
+            // 
+            // plus_btn
+            // 
+            this.plus_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.plus_btn.Location = new System.Drawing.Point(21, 28);
+            this.plus_btn.Name = "plus_btn";
+            this.plus_btn.Size = new System.Drawing.Size(43, 55);
+            this.plus_btn.TabIndex = 12;
+            this.plus_btn.Text = "+";
+            this.plus_btn.UseVisualStyleBackColor = true;
+            // 
+            // minus_btn
+            // 
+            this.minus_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.minus_btn.Location = new System.Drawing.Point(21, 89);
+            this.minus_btn.Name = "minus_btn";
+            this.minus_btn.Size = new System.Drawing.Size(43, 55);
+            this.minus_btn.TabIndex = 11;
+            this.minus_btn.Text = "-";
+            this.minus_btn.UseVisualStyleBackColor = true;
+            // 
+            // multiplication_btn
+            // 
+            this.multiplication_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.multiplication_btn.Location = new System.Drawing.Point(21, 150);
+            this.multiplication_btn.Name = "multiplication_btn";
+            this.multiplication_btn.Size = new System.Drawing.Size(43, 55);
+            this.multiplication_btn.TabIndex = 10;
+            this.multiplication_btn.Text = "*";
+            this.multiplication_btn.UseVisualStyleBackColor = true;
+            // 
+            // button_grp
+            // 
+            this.button_grp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_grp.Controls.Add(this.digits_grp);
+            this.button_grp.Controls.Add(this.operators_grp);
+            this.button_grp.Location = new System.Drawing.Point(12, 123);
+            this.button_grp.Name = "button_grp";
+            this.button_grp.Size = new System.Drawing.Size(379, 297);
+            this.button_grp.TabIndex = 4;
+            this.button_grp.TabStop = false;
+            this.button_grp.Text = "Кнопки";
+            // 
+            // monitor_grp
+            // 
+            this.monitor_grp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.monitor_grp.Controls.Add(this.Monitor_txtbx);
+            this.monitor_grp.Location = new System.Drawing.Point(15, 35);
+            this.monitor_grp.Name = "monitor_grp";
+            this.monitor_grp.Size = new System.Drawing.Size(376, 72);
+            this.monitor_grp.TabIndex = 5;
+            this.monitor_grp.TabStop = false;
+            this.monitor_grp.Text = "Экран";
+            // 
             // Monitor_txtbx
             // 
             this.Monitor_txtbx.Location = new System.Drawing.Point(6, 19);
@@ -415,6 +416,7 @@ namespace Calculator
             this.Monitor_txtbx.Name = "Monitor_txtbx";
             this.Monitor_txtbx.Size = new System.Drawing.Size(364, 47);
             this.Monitor_txtbx.TabIndex = 0;
+            this.Monitor_txtbx.Text = "0";
             // 
             // calc_win
             // 
