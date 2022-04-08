@@ -48,7 +48,7 @@ namespace Calculator
             this.button12 = new System.Windows.Forms.Button();
             this.result_btn = new System.Windows.Forms.Button();
             this.change_signe_btn = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.clear_entry_btn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.division_btn = new System.Windows.Forms.Button();
@@ -236,7 +236,7 @@ namespace Calculator
             this.operators_grp.Controls.Add(this.button12);
             this.operators_grp.Controls.Add(this.result_btn);
             this.operators_grp.Controls.Add(this.change_signe_btn);
-            this.operators_grp.Controls.Add(this.button9);
+            this.operators_grp.Controls.Add(this.clear_entry_btn);
             this.operators_grp.Controls.Add(this.button4);
             this.operators_grp.Controls.Add(this.button5);
             this.operators_grp.Controls.Add(this.division_btn);
@@ -307,16 +307,17 @@ namespace Calculator
             this.change_signe_btn.UseVisualStyleBackColor = true;
             this.change_signe_btn.Click += new System.EventHandler(this.change_signe_btn_Click);
             // 
-            // button9
+            // clear_entry_btn
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.clear_entry_btn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button9.Location = new System.Drawing.Point(70, 150);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(43, 55);
-            this.button9.TabIndex = 16;
-            this.button9.Text = "N/A";
-            this.button9.UseVisualStyleBackColor = true;
+            this.clear_entry_btn.Location = new System.Drawing.Point(70, 150);
+            this.clear_entry_btn.Name = "clear_entry_btn";
+            this.clear_entry_btn.Size = new System.Drawing.Size(43, 55);
+            this.clear_entry_btn.TabIndex = 16;
+            this.clear_entry_btn.Text = "CE";
+            this.clear_entry_btn.UseVisualStyleBackColor = true;
+            this.clear_entry_btn.Click += new System.EventHandler(this.clear_entry_btn_Click);
             // 
             // button4
             // 
@@ -361,7 +362,7 @@ namespace Calculator
             this.plus_btn.TabIndex = 12;
             this.plus_btn.Text = "+";
             this.plus_btn.UseVisualStyleBackColor = true;
-            this.plus_btn.Click += new System.EventHandler(this.plus_btn_Click_1);
+            this.plus_btn.Click += new System.EventHandler(this.plus_btn_Click);
             // 
             // minus_btn
             // 
@@ -463,7 +464,7 @@ namespace Calculator
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button result_btn;
         private System.Windows.Forms.Button change_signe_btn;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button clear_entry_btn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button division_btn;
