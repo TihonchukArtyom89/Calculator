@@ -31,8 +31,21 @@ namespace Calculator
             }
             else
             {
-                Monitor_txtbx.Text = "";
+                Monitor_txtbx.Clear();
                 Monitor_txtbx.Text += 5;
+            }
+        }
+        
+        public void enter_digit(int digit)
+        {
+            if (Monitor_txtbx.Text != "0")
+            {
+                Monitor_txtbx.Text += digit;
+            }
+            else
+            {
+                Monitor_txtbx.Clear();
+                Monitor_txtbx.Text += digit;
             }
         }
 
@@ -43,15 +56,7 @@ namespace Calculator
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 6;
-            }
-            else
-            {
-                Monitor_txtbx.Text = "";
-                Monitor_txtbx.Text += 6;
-            }
+            enter_digit(6);
         }
 
         private void title_app_Click(object sender, EventArgs e)
@@ -61,67 +66,27 @@ namespace Calculator
 
         private void btn_7_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 7;
-            }
-            else
-            {
-                Monitor_txtbx.Text = "";
-                Monitor_txtbx.Text += 7;
-            }
+            enter_digit(7);
         }
 
         private void btn_0_Click(object sender, EventArgs e)
         {
-            if(Monitor_txtbx.Text!="0")
-            {
-                Monitor_txtbx.Text += 0;
-            }
-            else
-            {
-                Monitor_txtbx.Text="";
-                Monitor_txtbx.Text += 0;
-            }
+            enter_digit(0);
         }
 
         private void btn_1_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 1;
-            }
-            else
-            {
-                Monitor_txtbx.Text = "";
-                Monitor_txtbx.Text += 1;
-            }
+            enter_digit(1);
         }
 
         private void btn_2_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 2;
-            }
-            else
-            {
-                Monitor_txtbx.Text = "";
-                Monitor_txtbx.Text += 2;
-            }
+            enter_digit(2);
         }
 
         private void btn_3_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 3;
-            }
-            else
-            {
-                Monitor_txtbx.Text = "";
-                Monitor_txtbx.Text += 3;
-            }
+            enter_digit(3);
         }
 
         private void digits_Enter(object sender, EventArgs e)
@@ -131,40 +96,17 @@ namespace Calculator
 
         private void btn_8_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 8;
-            }
-            else
-            {
-                Monitor_txtbx.Text = "";
-                Monitor_txtbx.Text += 8;
-            }
+            enter_digit(8);
         }
 
         private void btn_9_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 9;
-            }
-            else
-            {
-                Monitor_txtbx.Text = "";
-                Monitor_txtbx.Text += 9;
-            }
+            enter_digit(9);
         }
 
         private void btn_4_Click(object sender, EventArgs e)
         {
-            if (Monitor_txtbx.Text != "0")
-            {
-                Monitor_txtbx.Text += 4;
-            }
-            else
-            {
-                Monitor_txtbx.Text += 4;
-            }
+            enter_digit(4);
         }
 
         private void operators_Enter(object sender, EventArgs e)
@@ -184,6 +126,13 @@ namespace Calculator
                 Monitor_txtbx.Text = Monitor_txtbx.Text.Replace("-", "");
                 sign = false;
             }
+        }
+
+        private void plus_btn_Click_1(object sender, EventArgs e)
+        {
+            oper = 1;
+            first_operand = float.Parse(Monitor_txtbx.Text);
+            Monitor_txtbx.Clear();
         }
 
         private void plus_btn_Click(object sender, EventArgs e)
