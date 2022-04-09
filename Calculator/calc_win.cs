@@ -25,14 +25,6 @@ namespace Calculator
         
         public void enter_digit(int digit)
         {//разобраться с операциями и подсчётом результата
-         //if (float.IsNaN(result_operand))
-         //{
-
-            //}
-            //else
-            //{
-
-            //}
             if (Monitor_txtbx.Text != "0")
             {
                 Monitor_txtbx.Text += digit;
@@ -134,6 +126,21 @@ namespace Calculator
             result_operand = float.NaN;
         }
 
+        private void minus_btn_Click(object sender, EventArgs e)
+        {
+            if (float.IsNaN(result_operand).Equals(false))
+            {
+                oper = 2;
+                calculated_operand = float.Parse(Monitor_txtbx.Text);
+                Monitor_txtbx.Text = "0";
+                floated = false;
+                if (float.IsNaN(result_operand).Equals(false))
+                {
+                    calculate(oper);
+                }
+            }
+        }
+
         private void float_btn_Click(object sender, EventArgs e)
         {//реализовать добавление только одной запятой в одном операнде(числе)
             if (floated.Equals(false))
@@ -143,15 +150,40 @@ namespace Calculator
             }
         }
 
-        private void plus_btn_Click(object sender, EventArgs e)
+        public void calculate(int oper)
         {
-            if(Monitor_txtbx.Text!="0")
+            switch (oper)
+            {
+                case '1':
+                    result_operand += calculated_operand;
+                    Monitor_txtbx.Text = result_operand.ToString();
+                    break;
+                case '2':
+                    result_operand -= calculated_operand;
+                    Monitor_txtbx.Text = result_operand.ToString();
+                    break;
+                default:
+                    Monitor_txtbx.Text = "Ошибка! Нет такой операции.";
+                    calculated_operand = float.NaN;
+                    result_operand = float.NaN;
+                    break;
+            }
+        }
+
+        private void plus_btn_Click(object sender, EventArgs e)
+        {//нужна функция подсчёта calculate
+            if (float.IsNaN(result_operand).Equals(false))
             {
                 oper = 1;
                 calculated_operand = float.Parse(Monitor_txtbx.Text);
-                result_operand += calculated_operand;
-                Monitor_txtbx.Clear();
+                Monitor_txtbx.Text = "0";
+                floated = false;
+                if (float.IsNaN(result_operand).Equals(false))
+                {
+                    calculate(oper);
+                }
             }
         }
     }
 }
+//
