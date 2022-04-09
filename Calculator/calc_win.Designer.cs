@@ -294,6 +294,7 @@ namespace Calculator
             this.result_btn.TabIndex = 18;
             this.result_btn.Text = "=";
             this.result_btn.UseVisualStyleBackColor = true;
+            this.result_btn.Click += new System.EventHandler(this.result_btn_Click);
             // 
             // change_signe_btn
             // 
