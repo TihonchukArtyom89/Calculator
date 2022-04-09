@@ -12,44 +12,45 @@ namespace Calculator
 {
     public partial class calc_win : Form
     {
-        float first_operand=float.NaN, second_operand= float.NaN;
-        int oper;
-        bool sign = true;
+        float calculated_operand=float.NaN, result_operand= float.NaN;//числа над которыми совершаются действия
+        int oper;//код операции
+        bool sign = true,floated=false;
 
         public calc_win()
         {
 
             InitializeComponent();
         }
-        private void btn_5_Click(object sender, EventArgs e)
-        {
-            enter_digit(5);
-        }
+        
         
         public void enter_digit(int digit)
         {//разобраться с операциями и подсчётом результата
-            if (float.IsNaN(second_operand))
+         //if (float.IsNaN(result_operand))
+         //{
+
+            //}
+            //else
+            //{
+
+            //}
+            if (Monitor_txtbx.Text != "0")
             {
-                if (Monitor_txtbx.Text != "0")
-                {
-                    Monitor_txtbx.Text += digit;
-                }
-                else
-                {
-                    Monitor_txtbx.Clear();
-                    Monitor_txtbx.Text += digit;
-                }
+                Monitor_txtbx.Text += digit;
             }
             else
             {
-
+                Monitor_txtbx.Clear();
+                Monitor_txtbx.Text += digit;
             }
-
         }
 
         private void dev_note_Click(object sender, EventArgs e)
         {
 
+        }
+        private void btn_5_Click(object sender, EventArgs e)
+        {
+            enter_digit(5);
         }
 
         private void btn6_Click(object sender, EventArgs e)
@@ -129,13 +130,28 @@ namespace Calculator
         private void clear_entry_btn_Click(object sender, EventArgs e)
         {
             Monitor_txtbx.Text = "0";
+            calculated_operand = float.NaN;
+            result_operand = float.NaN;
+        }
+
+        private void float_btn_Click(object sender, EventArgs e)
+        {//реализовать добавление только одной запятой в одном операнде(числе)
+            if (floated.Equals(false))
+            {
+                Monitor_txtbx.Text += ",";
+                floated = true;
+            }
         }
 
         private void plus_btn_Click(object sender, EventArgs e)
         {
-            oper = 1;
-            first_operand = float.Parse(Monitor_txtbx.Text);
-            Monitor_txtbx.Clear();
+            if(Monitor_txtbx.Text!="0")
+            {
+                oper = 1;
+                calculated_operand = float.Parse(Monitor_txtbx.Text);
+                result_operand += calculated_operand;
+                Monitor_txtbx.Clear();
+            }
         }
     }
 }
