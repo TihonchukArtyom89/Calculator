@@ -375,6 +375,7 @@ namespace Calculator
             this.minus_btn.TabIndex = 11;
             this.minus_btn.Text = "-";
             this.minus_btn.UseVisualStyleBackColor = true;
+            this.minus_btn.Click += new System.EventHandler(this.minus_btn_Click);
             // 
             // multiplication_btn
             // 
