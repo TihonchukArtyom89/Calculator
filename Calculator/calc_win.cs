@@ -150,6 +150,16 @@ namespace Calculator
             }
         }
 
+        private void result_btn_Click(object sender, EventArgs e)
+        {
+            if (float.IsNaN(result_operand).Equals(false))
+            {
+                calculate(oper);
+                calculated_operand = float.NaN;
+                result_operand = float.NaN;
+            }
+        }
+
         public void calculate(int oper)
         {
             switch (oper)
