@@ -12,7 +12,7 @@ namespace Calculator
 {
     public partial class calc_win : Form
     {
-        float calculated_operand=float.NaN, result_operand= float.NaN;//числа над которыми совершаются действия
+        float first_operand=float.NaN, second_operand= float.NaN;//числа над которыми совершаются действия
         int oper;//код операции
         bool sign = true,floated=false;
 
@@ -122,23 +122,16 @@ namespace Calculator
         private void clear_entry_btn_Click(object sender, EventArgs e)
         {
             Monitor_txtbx.Text = "0";
-            calculated_operand = float.NaN;
-            result_operand = float.NaN;
+            first_operand = float.NaN;
+            second_operand = float.NaN;
         }
 
         private void minus_btn_Click(object sender, EventArgs e)
         {
-            if (float.IsNaN(result_operand).Equals(false))
-            {
-                oper = 2;
-                calculated_operand = float.Parse(Monitor_txtbx.Text);
-                Monitor_txtbx.Text = "0";
-                floated = false;
-                if (float.IsNaN(result_operand).Equals(false))
-                {
-                    calculate(oper);
-                }
-            }
+            second_operand = float.Parse(Monitor_txtbx.Text);
+            Monitor_txtbx.Clear();
+            oper = 2;
+            sign = true;
         }
 
         private void float_btn_Click(object sender, EventArgs e)
@@ -152,47 +145,69 @@ namespace Calculator
 
         private void result_btn_Click(object sender, EventArgs e)
         {
-            if (float.IsNaN(result_operand).Equals(false))
-            {
-                calculate(oper);
-                calculated_operand = float.NaN;
-                result_operand = float.NaN;
-            }
+            calculate();
+            Monitor_txtbx.Text = "0";
         }
 
-        public void calculate(int oper)
+        private void multiplication_btn_Click(object sender, EventArgs e)
+        {
+            second_operand = float.Parse(Monitor_txtbx.Text);
+            Monitor_txtbx.Clear();
+            oper = 3;
+            sign = true;
+        }
+
+        private void division_btn_Click(object sender, EventArgs e)
+        {
+            second_operand = float.Parse(Monitor_txtbx.Text);
+            Monitor_txtbx.Clear();
+            oper = 4;
+            sign = true;
+        }
+
+        public void calculate()
         {
             switch (oper)
             {
-                case '1':
-                    result_operand += calculated_operand;
-                    Monitor_txtbx.Text = result_operand.ToString();
+                case 1:
+                    second_operand += first_operand;
+                    Monitor_txtbx.Text = second_operand.ToString();
                     break;
-                case '2':
-                    result_operand -= calculated_operand;
-                    Monitor_txtbx.Text = result_operand.ToString();
+                case 2:
+                    second_operand -= first_operand;
+                    Monitor_txtbx.Text = second_operand.ToString();
+                    break;
+                case 3:
+                    second_operand *= first_operand;
+                    Monitor_txtbx.Text = second_operand.ToString();
+                    break;
+                case 4:
+                    if (first_operand != 0)
+                    {
+                        second_operand /= first_operand;
+                        Monitor_txtbx.Text = second_operand.ToString();
+                    }
+                    else
+                    {
+                        Monitor_txtbx.Text = "Ошибка! На ноль делить нельзя";
+                        first_operand = float.NaN;
+                        second_operand = float.NaN;
+                    }
                     break;
                 default:
                     Monitor_txtbx.Text = "Ошибка! Нет такой операции.";
-                    calculated_operand = float.NaN;
-                    result_operand = float.NaN;
+                    first_operand = float.NaN;
+                    second_operand = float.NaN;
                     break;
             }
         }
 
         private void plus_btn_Click(object sender, EventArgs e)
         {//нужна функция подсчёта calculate
-            if (float.IsNaN(result_operand).Equals(false))
-            {
-                oper = 1;
-                calculated_operand = float.Parse(Monitor_txtbx.Text);
-                Monitor_txtbx.Text = "0";
-                floated = false;
-                if (float.IsNaN(result_operand).Equals(false))
-                {
-                    calculate(oper);
-                }
-            }
+            second_operand = float.Parse(Monitor_txtbx.Text);
+            Monitor_txtbx.Clear();
+            oper = 1;
+            sign = true;
         }
     }
 }
