@@ -171,7 +171,6 @@ namespace Calculator
                 case 1:
                     second_operand = first_operand + float.Parse(Monitor_txtbx.Text);
                     Monitor_txtbx.Text = second_operand.ToString();
-                    MessageBox.Show("first_operand" + first_operand + "\n" + "second_operand" + second_operand);
                     break;
                 case 2:
                     second_operand = first_operand - float.Parse(Monitor_txtbx.Text);
