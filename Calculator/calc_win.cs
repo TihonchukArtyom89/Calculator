@@ -128,7 +128,7 @@ namespace Calculator
 
         private void minus_btn_Click(object sender, EventArgs e)
         {
-            second_operand = float.Parse(Monitor_txtbx.Text);
+            first_operand = float.Parse(Monitor_txtbx.Text);
             Monitor_txtbx.Clear();
             oper = 2;
             sign = true;
@@ -146,12 +146,11 @@ namespace Calculator
         private void result_btn_Click(object sender, EventArgs e)
         {
             calculate();
-            Monitor_txtbx.Text = "0";
         }
 
         private void multiplication_btn_Click(object sender, EventArgs e)
         {
-            second_operand = float.Parse(Monitor_txtbx.Text);
+            first_operand = float.Parse(Monitor_txtbx.Text);
             Monitor_txtbx.Clear();
             oper = 3;
             sign = true;
@@ -159,7 +158,7 @@ namespace Calculator
 
         private void division_btn_Click(object sender, EventArgs e)
         {
-            second_operand = float.Parse(Monitor_txtbx.Text);
+            first_operand = float.Parse(Monitor_txtbx.Text);
             Monitor_txtbx.Clear();
             oper = 4;
             sign = true;
@@ -170,41 +169,39 @@ namespace Calculator
             switch (oper)
             {
                 case 1:
-                    second_operand += first_operand;
+                    second_operand = first_operand + float.Parse(Monitor_txtbx.Text);
                     Monitor_txtbx.Text = second_operand.ToString();
+                    MessageBox.Show("first_operand"+ first_operand+"\n"+ "second_operand" + second_operand);
                     break;
                 case 2:
-                    second_operand -= first_operand;
+                    second_operand = first_operand - float.Parse(Monitor_txtbx.Text);
                     Monitor_txtbx.Text = second_operand.ToString();
                     break;
                 case 3:
-                    second_operand *= first_operand;
+                    second_operand = first_operand * float.Parse(Monitor_txtbx.Text);
                     Monitor_txtbx.Text = second_operand.ToString();
                     break;
                 case 4:
-                    if (first_operand != 0)
+                    if (float.Parse(Monitor_txtbx.Text) != 0)
                     {
-                        second_operand /= first_operand;
+                        second_operand = first_operand / float.Parse(Monitor_txtbx.Text);
                         Monitor_txtbx.Text = second_operand.ToString();
                     }
                     else
                     {
                         Monitor_txtbx.Text = "Ошибка! На ноль делить нельзя";
-                        first_operand = float.NaN;
-                        second_operand = float.NaN;
+
                     }
                     break;
                 default:
                     Monitor_txtbx.Text = "Ошибка! Нет такой операции.";
-                    first_operand = float.NaN;
-                    second_operand = float.NaN;
                     break;
             }
         }
 
         private void plus_btn_Click(object sender, EventArgs e)
         {//нужна функция подсчёта calculate
-            second_operand = float.Parse(Monitor_txtbx.Text);
+            first_operand = float.Parse(Monitor_txtbx.Text);
             Monitor_txtbx.Clear();
             oper = 1;
             sign = true;
