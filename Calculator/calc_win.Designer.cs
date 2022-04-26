@@ -353,6 +353,7 @@ namespace Calculator
             this.division_btn.TabIndex = 13;
             this.division_btn.Text = "/";
             this.division_btn.UseVisualStyleBackColor = true;
+            this.division_btn.Click += new System.EventHandler(this.division_btn_Click);
             // 
             // plus_btn
             // 
@@ -388,6 +389,7 @@ namespace Calculator
             this.multiplication_btn.TabIndex = 10;
             this.multiplication_btn.Text = "*";
             this.multiplication_btn.UseVisualStyleBackColor = true;
+            this.multiplication_btn.Click += new System.EventHandler(this.multiplication_btn_Click);
             // 
             // button_grp
             // 
